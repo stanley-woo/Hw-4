@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .form-container {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .form-container span {
+            color: #ff0000;
+            margin-left: 4px;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+            font-size: 16px;
+        }
+
+        .form-container input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            cursor: pointer;
+        }
+
+        .form-container input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .form-container .output-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .form-container .output-container output {
+            margin-top: 10px;
+            font-style: italic;
+            color: #ff0000;
+        }
+
+        .info-output {
+            color: #007700;
+            /* Info color */
+        }
+
+        /* Style for invalid input */
+        input:invalid,
+        textarea:invalid {
+            border-color: #f44336;
+        }
+
+        /* Style for invalid input when focused */
+        input:invalid:focus,
+        textarea:invalid:focus {
+            border-color: #f44336;
+            box-shadow: 0 0 5px #f44336;
+        }
+
+        /* Style for required indicator */
+        input:required::after,
+        textarea:required::after {
+            content: ' *';
+            color: #ff0000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <form action="https://httpbin.org" method="get">
+            <input type="hidden" name="possible-bot" id="possible-bot" value="true">
+            <label for="fname">Name</label>
+            <input type="text" id="fname" name="fullname" placeholder="Your name.." required />
+            <output for="fname" class="error-output"></output>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email Address.." required 
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"/>
+            <output for="email" class="error-output"></output>
+            <label for="comments">Your Message</label>
+            <textarea id="comments" name="comments" placeholder="Your Message..." required
+            maxlength="200" pattern="^[a-zA-Z0-9.,!? ]*${1,200}"></textarea>
+            <output for="comments" class="error-output"></output>
+            <input type="submit" value="Submit">
+
+        </form>
+
+        <div class="output-container">
+            <output for="fname" class="error-output"></output>
+            <output for="fname" class="info-output"></output>
+        </div>
+    </div>
+
+</body>
+
+</html>

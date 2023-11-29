@@ -1,0 +1,475 @@
+:root {
+    --main-background-color: #d9d9d9;
+    --primary-text-color: #353535;
+    --nav-background-color: #3c6e71;
+    --secondary-background-color: #666;
+    --gray-color: #9BABB8;
+    --highlight-color: #ffcc00;
+    --text-color: #9BABB8;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    color: var(--primary-text-color);
+    background: var(--main-background-color);
+    transition: background 0.3s ease;
+}
+
+/* Header styling */
+header {
+    background-color: var(--nav-background-color);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    transition: background 0.3s ease;
+}
+
+/* Navigation styling */
+nav {
+    margin-top: 10px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-block {
+    margin: 0 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-block a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.nav-block:hover {
+    color: var(--highlight-color);
+    transform: scale(1.1);
+}
+
+/* Banner styling */
+.name-banner {
+    text-align: center;
+    margin: 20px 0;
+    opacity: 0;
+    animation: fadeInUp 1s forwards 0.5s;
+}
+
+.name-banner h1 {
+    font: 90px/1.1em 'opensans-bold', sans-serif;
+    color: var(--primary-text-color);
+    letter-spacing: -2px;
+    margin: 0 auto 1px auto;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
+}
+
+.name-banner h3 {
+    font: 18px/1.9em 'librebaskerville-regular', serif;
+    color: #A8A8A8;
+    margin: 0 auto;
+    width: 70%;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+}
+
+.name-banner h3 span {
+    color: var(--primary-text-color);
+}
+
+/* Profile picture styling */
+.profile-pic {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeInUp 1s forwards 1s;
+}
+
+.profile-pic img {
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
+}
+
+.profile-pic:hover img {
+    opacity: 0.7;
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+    opacity: 0;
+    animation: fadeInUp 1s forwards 1s;
+}
+
+/* About me section styling */
+#aboutMe {
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInUp 1s forwards 1s;
+}
+
+#about-intro {
+    text-align: center;
+}
+
+#intro-skills-split-screen {
+    display: flex;
+    width: 100%;
+    height: 40vh;
+}
+
+#intro-skills-split-screen .left,
+#intro-skills-split-screen .right {
+    flex: 1;
+    padding: 20px;
+}
+
+#intro-skills-split-screen .left {
+    background-color: var(--gray-color);
+}
+
+#intro-skills-split-screen .right {
+    background-color:var(--gray-color);
+}
+
+/* Skills section styling */
+.right {
+    margin-left: 20px;
+}
+
+.skill-bars {
+    list-style: none;
+    padding: 0;
+    opacity: 0;
+    animation: fadeInRight 1s forwards 1s;
+}
+
+.skill-bars li {
+    margin-bottom: 10px;
+}
+
+/* Education section styling */
+#education {
+    background-color: var(--gray-color);
+    padding: 50px 0;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+#education-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.ucsd-icon {
+    margin-right: 20px;
+}
+
+#school-info {
+    max-width: 400px;
+}
+
+#school-info p {
+    margin: 0;
+}
+
+#school-info p strong {
+    color: #333;
+}
+
+#school-info p em {
+    font-style: italic;
+    color: #666;
+}
+
+#school-info span {
+    display: block;
+    color: #555;
+}
+
+/*Resume section styling */
+#resume {
+    padding: 50px 0;
+    background-color: var(--gray-color);
+}
+
+.resume-cards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.resume-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.resume-card:hover {
+    transform: translateY(-5px);
+}
+
+.resume-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.resume-card .sub-info {
+    color: #666;
+    font-size: 0.8em;
+    margin-bottom: 10px;
+}
+
+.resume-card p {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Add more styles as needed */
+
+
+#projects {
+    background-color: var(--gray-color);
+    /* Adjust background color as needed */
+    padding: 50px 0;
+    /* Adjust padding as needed */
+}
+
+.carousel-container {
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    /* Ensure the container doesn't overflow on small screens */
+}
+
+.project-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 0 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h2 {
+    color: #333;
+}
+
+.project-card p {
+    color: #666;
+}
+
+.project-footer {
+    margin: 0;
+    border: rgba(0, 0, 0, .4);
+    padding: 0.25em;
+    width: max-content;
+    text-align: center;
+}
+
+.project-footer img, .project-footer a {
+    box-sizing: border-box;
+    height: 20px;
+    width: 20px;
+}
+
+
+/* Contact section styling */
+#contactMe {
+    background-color: var(--gray-color);
+    /* Light gray background */
+    padding: 50px 0;
+    text-align: center;
+}
+
+#contact-h4 {
+    color: #333;
+}
+
+#contactMe p {
+    color: #555;
+    margin: 10px 0;
+}
+
+#email {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.icon-mail img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+#email h5 {
+    color: #333;
+}
+
+#email p {
+    color: #666;
+}
+
+/*Contact Form Styling */
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.form-container span {
+    color: #ff0000;
+    margin-left: 4px;
+}
+
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-size: 16px;
+}
+
+.form-container input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    cursor: pointer;
+}
+
+.form-container input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.form-container output {
+    margin-top: 10px;
+    font-style: italic;
+    color: #ff0000;
+}
+
+.fade-out {
+    animation: fadeOut 1.5s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+
+/* Style for invalid input */
+input:invalid,
+textarea:invalid {
+    border-color: #f44336;
+}
+
+/* Style for invalid input when focused */
+input:invalid:focus,
+textarea:invalid:focus {
+    border-color: #f44336;
+    box-shadow: 0 0 5px #f44336;
+}
+
+/* Style for required indicator */
+input:required::after,
+textarea:required::after {
+    content: ' *';
+    color: #ff0000;
+}
+
+/* Character Countdown Styles */
+.char-countdown {
+    font-size: 14px;
+    color: #777;
+}
+
+.char-countdown.warn {
+    color: #ff9800;
+    /* Warn color */
+}
+
+.char-countdown.error {
+    color: #f44336;
+    /* Error color */
+}
+
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--nav-background-color);
+    color: var(--text-color);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        transform: translateX(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+

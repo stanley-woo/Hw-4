@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="Software Engineer Portfolio" />
+    <meta name="keywords" content="Stanley Woo, Portfolio, Software, Engineer, Developer, stanford stanley,
+    Stanfordly stanley" />
+    <meta name="author" content="Stanley Woo" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="favicon_io/favicon.ico" rel="icon"/>
+    <link rel="stylesheet" href="style2.css"/>
+    <title>Stanley Woo's Stanfordly Website</title>
+    <style>
+        body {
+            transition: background-color 0.5s ease;
+        }
+        .dark-mode {
+            background-color: #333;
+            color: grey;
+        }
+
+        .toggle-button {
+            padding: 10px;
+            background-color: #ccc;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <header id="home">
+        <nav id="nav-menu">
+            <ol class = "nav-list">
+                <li class="nav-block">
+                    <a href="#home">Home </a>
+                </li>
+        
+                <li class="nav-block">
+                    <a href="#aboutMe">About Me </a>
+                </li>
+        
+                <li class="nav-block">
+                    <a href="#education">Education </a>
+                </li>
+        
+                <li class="nav-block">
+                    <a href="#resume">Resume </a>
+                </li>
+
+                <li class="nav-block">
+                    <a href="#projects">Projects </a>
+                </li>
+        
+                <li class="nav-block">
+                    <a href="#contactMe">Contact Me </a>
+                </li>
+            </ol>
+        </nav>
+    </header>
+    
+    <hr/>
+    <noscript>
+        <p>This site requires JavaScript for dark mode. Please enable JavaScript in your browser.</p>
+    </noscript>
+    <button class="toggle-button" id="darkModeToggle">Toggle Dark Mode</button>
+
+    <div class="name-banner">
+        <h1>
+            Stanley Woo
+        </h1>
+        <h3>
+            <span>Computer Science Student</span>
+            |
+            <span>Software Engineer</span>
+            |
+            <span>Founder</span>
+        </h3>
+    </div>
+
+    <main>
+        <hr/>
+       <picture class="profile-pic">
+            <source srcset="Stanley.webp" type="image/webp"/>
+            <img src="Stanley.png" alt="profile-pic" width="150" height="200">
+        </picture>
+        <section id="aboutMe">
+            <h2 id="about-intro">About me:</h2>
+            <!-- <aside>
+                <p>
+                    Look at the sky, I am still alive.
+                </p>
+            </aside> -->
+            <section id="intro-skills-split-screen">
+                <div class="left">
+                    <p id="intro-p">
+                        I am Stanley Alexander Tsz Long Woo.
+                        <!-- <br/> -->
+                        I am a 4th year Compute Science major from Stanford University.
+                        <!-- <br/> -->
+                        I have been working in the Stanford AI lab, and been interning for companies
+                        like Meta and Snowflake.
+                        <!-- <br/> -->
+                        I am very interested in cryptography and am interested in doing research on it in graudate
+                        school!
+                        <!-- <br/> -->
+                        My favorite song right now is <em>Keep It Up</em> by <I>Rex Orange County</I>!
+                    </p>
+                    <ul id="bio-info">
+                        <li>
+                            <strong>Fullname:</strong>
+                            <span>Stanley Tsz Long Woo</span>
+                        </li>
+            
+                        <li>
+                            <strong>Email:</strong>
+                            <span>stanleywoo450401@gmail.com</span>
+                        </li>
+            
+                        <li>
+                            <strong>Age:</strong>
+                            <span>25</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="right">
+                    <h3>Skills:</h3>
+                    <p>I am am indepandent teamworker, familiar with both coding and also doing research.
+                        My areas of expertise are computer science, software engineering, embedded systems,
+                        and cryptography. Below are some of my techinical skills:
+                    </p>
+                    <ul class="skill-bars">
+                        <li><strong>C++</strong></li>
+                
+                        <li><strong>PyTorch</strong></li>
+                
+                        <li><strong>Java</strong></li>
+                
+                        <li><strong>JS, HTML, CSS</strong></li>
+                
+                    </ul>
+                </div>
+            </section>
+        </section>
+
+        <hr />
+
+        <section id="education">
+            <h2>Education:</h2>
+        <div id="education-wrap">
+                <img class="ucsd-icon" src="UCSD_Seal.png" width="100">
+                <div id="school-info">
+                    <p><strong>University of California, San Diego</strong></p>
+                    <p>Bachelors of Science in Computer Science</p>
+                    <p><em>GPA: 3.85</em></p>
+                    <span>(Sep 2020 - Mar 2024)</span>
+                </div>
+            </div>
+        </section>
+        <hr/>
+        <section id="resume">
+            <div class="resume-cards">
+                <div class="resume-card">
+                    <h3>Snowflake Software Engineering Intern</h3>
+                    <p class="sub-info">June 2023 - Sep 2023</p>
+                    <p>Worked on the SQL-feature team. Implemented the Sansshell Project - A gRPC model to replace SSH access to
+                        Cloud instances</p>
+                </div>
+            
+                <div class="resume-card">
+                    <h3>Meta Software Engineering Intern</h3>
+                    <p class="sub-info">June 2022 - Sep 2022</p>
+                    <p>Worked on the SQL-feature team. Implemented the Sansshell Project - A gRPC model to replace SSH access to
+                        Cloud instances</p>
+                </div>
+            </div>
+        </section>
+
+        <br/>
+        <hr />
+
+        <section id="projects">
+            <div class="carousel-container">
+                <div class="project-card">
+                    <h2>Nachos Operating System</h2>
+                    <p>Implemented Operating System concepts in the Nachos operating system. Nachos is a Java application written to perform
+                    the functions of a real OS, but with missing implementations that would be filled in by us, the students.</p>
+                    <p><strong>Technologies Used:</strong> Java, C</p>
+                    <div class="project-footer">
+                        <a href="project1.html" class="cta-button">
+                            <img src="os.png" alt="Project Logo" width="20">
+                            View Project
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="carousel-container">
+                    <div class="project-card">
+                        <h2>IOT Project</h2>
+                        <p>Deployed C++ code on ~25 IoT devices (ESP32 Arduino Boards) for data collection in RIMAC (UCSD's Fitness Center) during
+                        May 2023. Each board records all nearby bluetooth beaconing devices and their signal strength, then logs that data to
+                        our backend API through HTTP.</p>
+                        <p><strong>Technologies Used:</strong> C++, Arduino</p>
+                        <div class="project-footer">
+                            <a href="project1.html" class="cta-button">
+                                <img src="os.png" alt="Project Logo" width="20">
+                                View Project
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+        
+            </div>
+        </section>
+        <hr />
+        <br />
+
+        <section id="contactMe">
+            <h4 id="contact-h4">Contact</h4>
+            <p>I'd love to be in contact with you!</p>
+            <p>Let me get to know more of you.</p>
+            <section id="email">
+                <i class="icon-mail">
+                    <img src="mail-icon.svg" alt="email icon" width="60" height="60">
+                </i>
+                <h5>Email me at</h5>
+                <p>stanleywoo450401@gmail.com</p>
+            </section>
+
+            <h4>Here is a contact form for you as well: </h4>
+
+            <div class="form-container">
+                <form id="myForm" action="https://httpbin.org" method="get">
+                    <input type="hidden" name="possible-bot" id="possible-bot" value="true">
+                    <label for="fname">Name: <span>*</span></label>
+                    <input type="text" id="form-fname" name="fullname" placeholder="Your name.." required required 
+                     title="Only letters and spaces are allowed" pattern="[A-Za-z ]+"/>
+                    <output for="fname" id="fname-error" class="error-container"></output>
+                    <label for="email">Email: <span>*</span></label>
+                    <input type="email" id="form-email" name="email" placeholder="Your Email Address.." required 
+                    />
+                    <output for="email" id="email-error" class="error-container"></output>
+                    <br/>
+                    <label for="comments">Your Message: <span>*</span></label>
+                    <textarea id="form-comments" name="comments" placeholder="Your Message..." required maxlength="100"
+                        title="Only letters, numbers, and basic punctuation are allowed""
+                        pattern="^[a-zA-Z0-9]"></textarea>
+                    <output for="comments" id="comment-error" class="error-container"></output>
+                    <div class="char-countdown" id="charCountdown">100 characters remaining</div>
+                    <input type="submit" value="Submit">
+
+                </form>
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; Stanley Woo</p>
+    </footer>
+<script src="script.js"></script>
+</body>
+
+</html>
